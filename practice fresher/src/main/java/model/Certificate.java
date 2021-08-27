@@ -1,8 +1,10 @@
 package model;
 
+import java.io.Serializable;
 import java.util.Date;
 
-public class Certificate {
+public class Certificate implements Serializable {
+    private static final long serialVersionUID = 11200003082000L;
     private Long certificatedID;
     private String certificateName;
     private String certificateRank;

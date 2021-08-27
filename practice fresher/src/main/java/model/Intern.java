@@ -40,6 +40,10 @@ public class Intern extends Employee{
 
     @Override
     public String showInfo() {
+        String certificateListToString = "";
+        for (int i = 0; i < certificateList.size(); i++) {
+            certificateListToString+= certificateList.get(i).toString();
+        }
         return "Intern{" +
                 "id=" + id +
                 ", fullName='" + fullName + '\'' +
@@ -50,6 +54,7 @@ public class Intern extends Employee{
                 "majors='" + majors + '\'' +
                 ", semester='" + semester + '\'' +
                 ", universityName='" + universityName + '\'' +
+                certificateListToString+
                 '}';
     }
 

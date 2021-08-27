@@ -39,6 +39,10 @@ public class Fresher extends Employee{
 
     @Override
     public String showInfo() {
+        String certificateListToString = "";
+        for (int i = 0; i < certificateList.size(); i++) {
+            certificateListToString+= certificateList.get(i).toString();
+        }
         return "Fresher{" +
                 "id=" + id +
                 ", fullName='" + fullName + '\'' +
@@ -49,6 +53,7 @@ public class Fresher extends Employee{
                 "graduationDate='" + graduationDate + '\'' +
                 ", graduationRank='" + graduationRank + '\'' +
                 ", education='" + education + '\'' +
+                certificateListToString+
                 '}';
     }
 }

@@ -1,10 +1,12 @@
 package model;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-public abstract class Employee {
+public abstract class Employee implements Serializable {
+     private static final long serialVersionUID = 611200003082000L;
      Long id;
      String fullName;
      Date birthDay;
@@ -90,17 +92,6 @@ public abstract class Employee {
     public abstract String showInfo() ;
 
 
-    @Override
-    public String toString() {
-        return "Employee{" +
-                "id=" + id +
-                ", fullName='" + fullName + '\'' +
-                ", birthDay=" + birthDay +
-                ", phone='" + phone + '\'' +
-                ", email='" + email + '\'' +
-                ", employeeType=" + employeeType +
-                '}';
-    }
 
     public static Fresher downCastingFresher(Employee e) {
         Fresher fresher = (Fresher) e;

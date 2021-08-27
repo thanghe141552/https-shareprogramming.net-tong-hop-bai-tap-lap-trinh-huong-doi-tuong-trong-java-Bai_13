@@ -30,6 +30,10 @@ public class Experience extends Employee{
 
     @Override
     public String showInfo() {
+        String certificateListToString = "";
+        for (int i = 0; i < certificateList.size(); i++) {
+            certificateListToString+= certificateList.get(i).toString();
+        }
         return "Experience{" +
                 "id=" + id +
                 ", fullName='" + fullName + '\'' +
@@ -39,6 +43,7 @@ public class Experience extends Employee{
                 ", employeeType=" + employeeType + '\'' +
                 "expInYear='" + expInYear + '\'' +
                 ", proSkill='" + proSkill + '\'' +
+                certificateListToString+
                 '}';
     }
 
